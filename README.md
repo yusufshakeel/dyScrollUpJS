@@ -6,7 +6,7 @@ And you can customize it too!
 
 #Download
 
-[Download](https://github.com/yusufshakeel/dyScrollUpJS/release) the latest release of this project.
+[Download](https://github.com/yusufshakeel/dyScrollUpJS/releases) the latest release of this project.
 
 #License
 
