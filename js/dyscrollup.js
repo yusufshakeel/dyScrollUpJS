@@ -26,7 +26,7 @@
         showafter : '300',
         scrolldelay : '500',
         position : 'right',
-        image : 'image/dyscrollup/36.png',
+        image : 'image/36.png',
         shape : 'circle',
         width : "auto",
         height : "auto"
