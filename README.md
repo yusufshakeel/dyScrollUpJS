@@ -4,6 +4,9 @@ Small plugin that you can use in your website and blog to create "Scroll-to-top"
 
 And you can customize it too!
 
+#Documentation
+You can find the project documentation [here](https://www.dyclassroom.com/dyscrollupjs/documentation).
+
 #Download
 
 [Download](https://github.com/yusufshakeel/dyScrollUpJS/releases) the latest release of this project.
