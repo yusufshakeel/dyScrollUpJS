@@ -26,10 +26,10 @@
         showafter : '300',
         scrolldelay : '500',
         position : 'right',
-        image : 'image/36.png',
+        image : "",
         shape : 'circle',
-        width : "auto",
-        height : "auto"
+        width : 32,
+        height : 32
     };
 
 
@@ -57,10 +57,10 @@
      *  showafter : "integer"   //(optional) default: 300, show btn after scolling X px down
      *  scrolldelay : "intwger" //(optional) default: 500, delay the scrolling up action in milliseconds
      *  position : "string"     //(optional) values: "left|right" default: "right"
-     *  image : "string"        //(optional) values: "path of the image"
+     *  image : "string"        //(optional) values: "path of the image" default: ''
      *  shape : "string"        //(optional) values: "other|circle" default: "circle"
-     *  width : "integer"       //(optional) default: "auto"
-     *  height : "integer"      //(optional) default: "auto"
+     *  width : "integer"       //(optional) default: 32
+     *  height : "integer"      //(optional) default: 32
      * }
      *
      * @param object option     user preferences
@@ -80,7 +80,7 @@
             html, btn, img;
 
         //add the button
-        html = "<a id='dyscrollup-btn' href='#'><img src='"+self.option.image+"'></a>";
+        html = "<a id='dyscrollup-btn' href='#'></a>";
         $("body").prepend(html);
 
         //set position
@@ -95,14 +95,20 @@
                 break;
         }
 
+        //set image
+        if (self.option.image.length > 0) {
+            btn.css('background', 'url('+ self.option.image +') center center no-repeat');
+        } else {
+            btn.css('background-color', 'rgba(0,0,0,1)');
+        }
         //set shape
-        img = $("#dyscrollup-btn img");
+        btn = $("#dyscrollup-btn");
         if (self.option.shape === 'circle') {
-            img.css('border-radius', '50%');
+            btn.css('border-radius', '50%');
         }
 
         //set dimension
-        img.css('width', self.option.width)
+        btn.css('width', self.option.width)
             .css('height', self.option.height);
     };
 
@@ -110,9 +116,9 @@
         var
             self = this;
 
-        $("body").on("click", "a#dyscrollup-btn", function(e) {
+        $("body").on("click", "#dyscrollup-btn", function(e) {
             e.preventDefault();
-            $("body").animate({
+            $("html, body").animate({
 				scrollTop: 0
 			}, self.option.scrolldelay);
 			return false;
