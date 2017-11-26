@@ -103,7 +103,7 @@
                 'background-color': 'rgba(0,0,0,1)',
                 'color': '#fff',
                 'text-align': 'center',
-                'font-size': '22px'
+                'font-size': '20px'
             }).html('&#8593;');
         }
         //set shape
