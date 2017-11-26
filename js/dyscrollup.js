@@ -13,23 +13,23 @@
  * Date: 2015-03-21 Saturday
  */
 /*! dyScrollUpJS | (c) 2016 Yusuf Shakeel | https://github.com/yusufshakeel/dyScrollUpJS */
-(function(global, $) {
+(function (global, $) {
 
     "use strict";
 
     var
-    //this will be used by the user.
+        //this will be used by the user.
         dyscrollup = {};
 
     //default option
     dyscrollup.option = {
-        showafter : '300',
-        scrolldelay : '500',
-        position : 'right',
-        image : "",
-        shape : 'circle',
-        width : 32,
-        height : 32
+        showafter: '300',
+        scrolldelay: '500',
+        position: 'right',
+        image: "",
+        shape: 'circle',
+        width: 32,
+        height: 32
     };
 
 
@@ -80,7 +80,7 @@
             html, btn, img;
 
         //add the button
-        html = "<a id='dyscrollup-btn' href='#'></a>";
+        html = "<div id='dyscrollup-btn'></div>";
         $("body").prepend(html);
 
         //set position
@@ -97,9 +97,14 @@
 
         //set image
         if (self.option.image.length > 0) {
-            btn.css('background', 'url('+ self.option.image +') center center no-repeat');
+            btn.css('background', 'url(' + self.option.image + ') center center no-repeat');
         } else {
-            btn.css('background-color', 'rgba(0,0,0,1)');
+            btn.css({
+                'background-color': 'rgba(0,0,0,1)',
+                'color': '#fff',
+                'text-align': 'center',
+                'font-size': '20px'
+            }).html('&#8593;');
         }
         //set shape
         btn = $("#dyscrollup-btn");
@@ -116,12 +121,15 @@
         var
             self = this;
 
-        $("body").on("click", "#dyscrollup-btn", function(e) {
+        $("body").on("click", "#dyscrollup-btn", function (e) {
             e.preventDefault();
-            $("html, body").animate({
-				scrollTop: 0
-			}, self.option.scrolldelay);
-			return false;
+            if (!$(this).hasClass("click-locked")) {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, self.option.scrolldelay);
+                $(this).addClass("click-locked");
+            }
+            return false;
         });
     };
 
@@ -129,17 +137,20 @@
         var
             self = this;
 
-        $(window).on("scroll", function(e) {
-			if ( $(window).scrollTop() > self.option.showafter ) {
-				$('a#dyscrollup-btn').fadeIn();
-			} else {
-				$('a#dyscrollup-btn').fadeOut();
-			}
-		});
+        $(window).on("scroll", function (e) {
+            if ($(window).scrollTop() > self.option.showafter) {
+                $('#dyscrollup-btn')
+                    .fadeIn();
+            } else {
+                $('#dyscrollup-btn')
+                    .fadeOut()
+                    .removeClass("click-locked");
+            }
+        });
     };
 
     //attach to global window object
     global.dyscrollup = dyscrollup;
 
 }(typeof window !== "undefined" ? window : this,
-typeof jQuery !== "undefined" ? jQuery : undefined));
+    typeof jQuery !== "undefined" ? jQuery : undefined));
