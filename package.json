@@ -1,0 +1,30 @@
+{
+  "name": "dyscrollupjs",
+  "version": "1.1.2",
+  "description": "dyScrollUpJS is a small JavaScript plugin that you can use in your website and blog to create \"Scroll-to-top\" button.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusufshakeel/dyScrollUpJS.git"
+  },
+  "keywords": [
+    "javascript",
+    "plugin",
+    "scroll-to-top",
+    "navigate"
+  ],
+  "author": "Yusuf Shakeel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yusufshakeel/dyScrollUpJS/issues"
+  },
+  "homepage": "https://github.com/yusufshakeel/dyScrollUpJS#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-uglify": "^3.2.1"
+  }
+}

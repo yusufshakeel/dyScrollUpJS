@@ -1,23 +1,35 @@
 # dyScrollUpJS
-
 Small plugin that you can use in your website and blog to create "Scroll-to-top" button.
 
 And you can customize it too!
 
-# Documentation
+
+### Status
+
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yusufshakeel/dyScrollUpJS)
+[![npm version](https://img.shields.io/badge/npm-1.1.2-blue.svg)](https://www.npmjs.com/package/dyscrollupjs)
+[![](https://data.jsdelivr.com/v1/package/npm/dycodehighlighter/badge)](https://www.jsdelivr.com/package/npm/dyscrollupjs)
+
+
+### Getting Started
+* Download the [latest release](https://github.com/yusufshakeel/dyScrollUpJS/releases) of the project.
+* Clone the repo: `git clone https://github.com/yusufshakeel/dyScrollUpJS.git`
+* Install with npm: `npm install dyscrollupjs`
+* From jsDelivr CDN: `https://www.jsdelivr.com/package/npm/dyscrollupjs`
+
+
+### Tutorial Video
+[Watch the YouTube video](https://www.youtube.com/watch?v=P7CvToMSfZA).
+
+
+### Documentation
 You can find the project documentation [here](https://www.dyclassroom.com/dyscrollupjs/documentation).
 
-# Download
 
-[Download](https://github.com/yusufshakeel/dyScrollUpJS/releases) the latest release of this project.
+### License
+It's free and released under [MIT License](https://github.com/yusufshakeel/dyScrollUpJS/blob/master/LICENSE) Copyright (c) 2016 Yusuf Shakeel
 
-# License
+### Donate
+Feeling generous :-) Buy me a cup of tea.
 
-It's free and released under [MIT License](https://github.com/yusufshakeel/dyScrollUpJS/blob/master/LICENSE)
-Copyright (c) 2016 Yusuf Shakeel
-
-# Buy me a cup of tea
-
-If you enjoy watching my [YouTube](https://www.youtube.com/yusufshakeel) videos and find my projects here on [GitHub](https://github.com/yusufshakeel) interesting and helpful then feel free to buy me a cup of tea or coffee. It helps in creating more :)
-
-[Donate via PayPal](https://paypal.me/yusufshakeel)
+[Donate via PayPal](https://www.paypal.me/yusufshakeel)
