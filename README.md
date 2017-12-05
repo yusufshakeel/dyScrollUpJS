@@ -7,7 +7,7 @@ And you can customize it too!
 ### Status
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yusufshakeel/dyScrollUpJS)
-[![npm version](https://img.shields.io/badge/npm-1.1.2-blue.svg)](https://www.npmjs.com/package/dyscrollupjs)
+[![npm version](https://img.shields.io/badge/npm-1.1.4-blue.svg)](https://www.npmjs.com/package/dyscrollupjs)
 [![](https://data.jsdelivr.com/v1/package/npm/dyscrollupjs/badge)](https://www.jsdelivr.com/package/npm/dyscrollupjs)
 
 
