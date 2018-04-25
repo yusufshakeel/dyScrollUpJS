@@ -1,87 +1,132 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Index Page</title>
-    <link type="text/css" rel="stylesheet" href="css/default.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- twitter bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- dyscrollup style -->
-    <link type="text/css" rel="stylesheet" href="css/dyscrollup.min.css">
+    <title>dyScrollUpJS - Yusuf Shakeel</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dycodehighlighter@1.0.1/dist/css/dycodehighlighter.min.css">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+        pre {
+            background: #eee;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 10px;
+        }
+    </style>
 
 </head>
 <body>
 
 <div class="container">
     <div class="row">
-
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-6 offset-sm-3 col-md-6 offset-md-3">
             <div class="text-center">
                 <h1>dyScrollUpJS</h1>
-                <p>dyScrollUpJS is a small JavaScript plugin that you can use in your website and blog to create "Scroll-to-top" button.</p>
-
-                <div class="text-center">
-                    <a class="btn btn-default btn-lg" href='https://github.com/yusufshakeel/dyScrollUpJS/releases'>Download</a>
-                    <a class="btn btn-default btn-lg" href='https://github.com/yusufshakeel/dyScrollUpJS'>GitHub</a>
-                </div>
-
-                <h4>Created by: <a href='https://github.com/yusufshakeel'>Yusuf Shakeel</a></h4>
-
-                <h4><a href='https://www.youtube.com/watch?v=P7CvToMSfZA'>Click here</a> to watch the tutorial video.</h4>
-                <h4><a href='https://www.dyclassroom.com/dyscrollupjs/documentation'>Click here</a> for the documentation.</h4>
+                <p>dyScrollUpJS is a small JavaScript plugin that you can use in your website and blog to create
+                    "Scroll-to-top" button.</p>
             </div>
 
             <div class="text-center">
-                <h3>License</h3>
-                <p>It's free and released under <a href="https://github.com/yusufshakeel/dyScrollUpJS/blob/master/LICENSE">MIT License</a> Copyright (c) 2016 <a href="https://github.com/yusufshakeel">Yusuf Shakeel</a></p>
+                <a class="btn btn-outline-primary btn-lg"
+                   href='https://github.com/yusufshakeel/dyScrollUpJS/releases'>Download</a>
+
+                <a class="btn btn-outline-primary btn-lg"
+                   href='https://github.com/yusufshakeel/dyScrollUpJS'>GitHub</a>
             </div>
 
+            <hr>
+
+            <div class="text-center">
+                <p>Created by: <a href='https://github.com/yusufshakeel'>Yusuf Shakeel</a></p>
+
+                <p><a href='https://www.youtube.com/watch?v=P7CvToMSfZA'>Click here</a> to watch the tutorial video.
+                </p>
+                <p><a href='https://www.dyclassroom.com/dyscrollupjs/documentation'>Click here</a> for the
+                    documentation.</p>
+            </div>
+
+            <div class="text-center">
+                <h4>License</h4>
+                <p>It's free and released under <a
+                        href="https://github.com/yusufshakeel/dyScrollUpJS/blob/master/LICENSE">MIT License</a>
+                    Copyright (c) 2016 <a href="https://github.com/yusufshakeel">Yusuf Shakeel</a></p>
+            </div>
+
+            <hr>
+
         </div>
+    </div><!--/ .row -->
 
-
-
-        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-
-
-            <h3 class="text-center">Prerequisite</h3>
-
-            <p class="text-center">jQuery v1.12+ is required for dyClockJS.</p>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 offset-sm-3 col-md-6 offset-md-3">
 
             <h3 class="text-center">Getting Started</h3>
-            <p>Include the JavaScript and Stylesheet file in your page.</p>
-            <p>Call the <code>init()</code> method of dyScrollUpJS to draw the scroll-to-top button.</p>
+            <p>Include the JavaScript file in your page.</p>
+            <p>Call the <code>init()</code> method of dyScrollUpJS to create the scroll-to-top button.</p>
 
-<pre class="dyCodeHighlighter line-numbers"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;dyClockJS&lt;/title&gt;
-    &lt;link href=&quot;/path/to/dyscrollup.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+            <pre>dyscrollup.init();</pre>
 
-    &lt;!-- some code goes here --&gt;
+            <hr>
 
-    &lt;!-- javascript --&gt;
-    &lt;script src=&quot;path/to/jquery.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;path/to/dyscrollup.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-    // initialise dyScrollUpJS
-    dyscrollup.init();
-    &lt;/script&gt;
+            <h3 class="text-center">Configure</h3>
 
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+            <p>Pass the following to configure.</p>
+
+            <pre>dyscrollup.init({
+    showafter: 600,
+    scrolldelay: 500,
+    position: 'right',
+    image: 'path/to/image/32.png',
+    shape: 'other',
+    width: 30,
+    height: 30
+});</pre>
+
+            <p>Where,</p>
+
+            <p><code>showafter: integer</code></p>
+            <p>(optional) default: 300, show button after scolling X pixels down</p>
+
+            <p><code>scrolldelay: integer</code></p>
+            <p>(optional) default: 500, delay the scrolling up action in milliseconds</p>
+
+            <p><code>position: "string"</code></p>
+            <p>(optional) values: "left|right" default: "right"</p>
+
+            <p><code>image: "string"</code></p>
+            <p>(optional) values: "path of the image" default: ""</p>
+
+            <p><code>shape: "string"</code></p>
+            <p>(optional) values: "other|circle" default: "circle"</p>
+
+            <p><code>width: integer</code></p>
+            <p>(optional) default: 32</p>
+
+            <p><code>height: integer</code></p>
+            <p>(optional) default: 32</p>
 
         </div>
+    </div><!--/ .row -->
 
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 offset-sm-3 col-md-6 offset-md-3">
+
+            <hr>
 
             <div class="text-center">
-                <h3>Donate</h3>
-                <p>Feeling generous &hearts; Buy me a cup of tea</p>
+                <h4>Donate</h4>
+                <p>Feeling generous &hearts;
+                    <br>Buy me a cup of tea</p>
                 <p><a href="https://www.paypal.me/yusufshakeel">Donate via PayPal</a></p>
             </div>
 
@@ -93,22 +138,32 @@
             </div>
 
         </div>
-
     </div>
 </div>
 
-<!-- javascript -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/dyscrollup.min.js"></script>
-<!-- init dyscrollup -->
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<script src="dist/js/dyscrollup.min.js"></script>
 <script>
-    dyscrollup.init();
+    dyscrollup.init({
+        showafter: 300,
+        scrolldelay: 300,
+        position: 'right',
+        image: 'dist/image/32.png',
+        shape: 'other',
+        width: 30,
+        height: 30
+    });
 </script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/dycodehighlighter@1.0.1/dist/js/dycodehighlighter.min.js"></script>
-<script>$(function(){
-    dyCodeHighlighter.init();
-});</script>
 </body>
 </html>

@@ -33,3 +33,15 @@ It's free and released under [MIT License](https://github.com/yusufshakeel/dyScr
 Feeling generous :-) Buy me a cup of tea.
 
 [Donate via PayPal](https://www.paypal.me/yusufshakeel)
+
+
+## Note!
+
+### Version 2.x
+
+No jQuery required.
+
+
+### Version 1.x
+
+Requires jQuery v1.12 and above.
