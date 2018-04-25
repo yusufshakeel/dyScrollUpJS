@@ -19,36 +19,15 @@ module.exports = function(grunt) {
 
         pkg: grunt.file.readJSON('package.json'),
 
-        cssmin : {
-            target : {
-                src : ["css/dyscrollup.css"],
-                dest : "css/dyscrollup.min.css"
-            }
-        },
-
         uglify: {
             distVersion: {
                 options : {
-                    banner : "/*!\n" +
-                    " * dyScrollUpJS is a JavaScript plugin to create a button to scroll back\n" +
-                    " * to the top of the page.\n" +
-                    " *\n" +
-                    " * Author: Yusuf Shakeel\n" +
-                    " * https://github.com/yusufshakeel\n" +
-                    " *\n" +
-                    " * GitHub Link: https://github.com/yusufshakeel/dyScrollUpJS\n" +
-                    " *\n" +
-                    " * MIT license\n" +
-                    " * Copyright (c) 2016 Yusuf Shakeel\n" +
-                    " *\n" +
-                    " * Date: 2015-03-21 Saturday\n" +
-                    " * Build: <%= grunt.template.today(\"yyyy-mm-dd HH:MM:ss\") %> \n" +
-                    " */",
+                    banner : "/* dyScrollUpJS v<%= pkg.version %> | Yusuf Shakeel | https://github.com/yusufshakeel/dyScrollUpJS | MIT License | Build: <%= grunt.template.today(\"yyyy-mm-dd HH:MM:ss\") %> */",
                     mangle: true
                 },
                 files: {
-                    'js/dyscrollup.min.js': [
-                        'js/dyscrollup.js'
+                    'dist/js/dyscrollup.min.js': [
+                        'src/js/dyscrollup.js'
                     ]
                 }
             }
@@ -57,10 +36,9 @@ module.exports = function(grunt) {
     });
 
     // load plugin
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // create default task
-    grunt.registerTask("default", ["cssmin", "uglify:distVersion"]);
+    grunt.registerTask("default", ["uglify:distVersion"]);
 
 };

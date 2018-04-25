@@ -1,10 +1,12 @@
 {
   "name": "dyscrollupjs",
-  "version": "1.1.4",
+  "version": "2.0.0",
   "description": "dyScrollUpJS is a small JavaScript plugin that you can use in your website and blog to create \"Scroll-to-top\" button.",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && grunt",
+    "all": "npm run build"
   },
   "repository": {
     "type": "git",
